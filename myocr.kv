@@ -1,11 +1,30 @@
-
+#:kivy 2.3.1
 
 BoxLayout:
     orientation: "vertical"
+    padding: 10
+    spacing: 10
+
     Camera:
         id: camera_widget
         resolution: (640, 480)
         play: False
+        allow_stretch: True
+
+    BoxLayout:
+        size_hint_y: None
+        height: "48dp"
+        spacing: 10
+
+        Button:
+            text: "Start Camera"
+            on_release: app.start_camera()
+        Button:
+            text: "Capture"
+            on_release: app.capture_image()
+
     TextInput:
         id: result_text
         hint_text: "Extracted text will appear here..."
+        size_hint_y: 0.4
+        multiline: True
