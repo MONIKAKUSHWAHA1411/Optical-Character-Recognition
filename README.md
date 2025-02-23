@@ -31,3 +31,12 @@ MyOCRApp/
 │   │   │   └── AndroidManifest.xml
 │   └── build.gradle
 └── build.gradle
+
+
+MyOCRApp/
+├── main.py
+├── myocr.kv
+└── requirements.txt
+main.py: Contains the Python code for the Kivy app.
+myocr.kv: Holds the UI definition in Kivy language.
+requirements.txt: Lists dependencies (kivy, pytesseract, pillow)
