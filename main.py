@@ -7,15 +7,14 @@ from kivy.uix.label import Label
 from PIL import Image
 import pytesseract
 
-# Load the Kivy UI from myocr.kv
-Builder.load_file("myocr.kv")
-
 class MyOCRApp(App):
     def build(self):
+        # Load the KV file and assign it to self.root
         self.root = Builder.load_file("myocr.kv")
         return self.root
 
     def start_camera(self):
+        # Access the camera widget from the KV file via its id
         camera = self.root.ids.camera_widget
         camera.play = True
 
